@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="content">
-{% block content_title %}
-
-{% endblock %}
-
 
    <div class="row">
 
-
         <div class="eleven columns">
+				{% block content_title %}
+
+				{% endblock %}
+		
 		         <ol id="post-list">
 				{% for article in articles_page.object_list %}
 				        <li><article class="hentry">

@@ -7139,6 +7139,23 @@ footer#credits .socbtns {
     filter: Alpha(opacity=60);
 }
 
+.sidebarbg {
+    background-color: #FBFBFB;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin: 5px 0px 10px 0px;
+    min-height: 15px;
+}
+.sidebarbg h4, .sidebarbg a{
+	padding-left: 10px;
+}
+.sidebarbg a:hover{
+	display: block;
+	background-color: #EEEEEE;
+	text-decoration: none;
+	padding-left: 10px;
+}
 
 
 
