@@ -1,12 +1,14 @@
 
 ###xycoding-gum
 
-本主题是在pecilan-themes中主题gum的基础上，有如下几个小改变
+本主题是在pecilan-themes中gum的基础上，作了如下几个小改变
 
 1. 左侧《social》栏中每个链接加上图标
 2. 加上《回到顶部》效果
 3. 底部附上自己的照片
 
+###效果图
+![屏幕截图](xycoding-gum.png)
 
 
 ----------
