@@ -4,6 +4,10 @@
         {% block head %}
 
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+		
+		<meta name="description" content="Coding the World是一个专注于开源软件、Linux、数据结构、算法等的IT科技博客，希望大家一起交流学习。">
+		<meta name="keywords" content="码农，编程语言，开源软件，互联网，程序员找工作，Linux，数据结构，算法，移动互联网，生活时尚，情感交流，技术博客">
+		
         <meta charset="utf-8" />
         {% if FEED_ALL_ATOM %}
         <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -65,7 +69,7 @@
 <!-- Fork me on github -->
 {% if GITHUB_URL %}
 <a target="_blank" href="{{ GITHUB_URL }}">
-	<img style="position: absolute; top: 0px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" />
+	<img width="149px" height="149px" style="position: absolute; top: 0px; right: 0; border: 0;" src="{{ SITEURL }}/theme/icons/forkme.png" alt="Fork me on GitHub" />
 </a>
 {% endif %}
 
@@ -114,11 +118,11 @@
     
         <footer id="credits" class="row">
           <div class="seven columns left-center">
-				   <img height="77px" width="103px" src="http://d.pcs.baidu.com/thumbnail/b16458171fe467e859e140f171ac5f3a?fid=3305307038-250528-707787867&time=1385641720&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-Gjd4IgZVbnI4p3E2SfCzOdc5b%2Bk%3D&expires=8h&prisign=unkown&r=373163494&size=c10000_u10000&quality=100" />												
+				   <img alt="Welcome" height="77px" width="103px" src="{{ SITEURL }}/images/blogger.jpg" />												
                    <address id="about" class="vcard body" style="margin-left:110px;margin-top:-85px">
 					博主目前就读于北邮，一名技术渣硕，码得了代码，调得了BUG。<br/>
 					Email:xuyangfighting@gmail.com&nbsp;欢迎添加友链~<br/>
-					本博客使用Pelican+GitHub Pages搭建，详细请参考<a href="http://xycoding.com/pages/2013/11/21/create-blog/" class="active" target="_blank">教程</a>。
+					本博客使用Pelican+GitHub Pages搭建，详细请参考<a href="http://www.xycoding.com/pages/2013/11/21/create-blog/" class="active" target="_blank">教程</a>。
 				   </address>
           </div>
 
