@@ -15,7 +15,8 @@
            {{ translations.translations_for(article) }}
             </header>
             <footer class="post-info">
-              <abbr class="published" title="{{ article.date.isoformat() }}">
+              <!--
+			  <abbr class="published" title="{{ article.date.isoformat() }}">
                 {{ article.locale_date }}
               </abbr>
               {% if article.author %}
@@ -23,6 +24,17 @@
                 By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
               </address>
               {% endif %}
+			  -->
+			  <address class="vcard author" style="font-style:italic;margin-bottom:-10px;">
+				{{ article.locale_date }}
+				{% if article.author %}
+					&nbsp;&nbsp;Write By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+				{% endif %}
+				{% if LICENSE %}
+					&nbsp;&nbsp;<p style="color:red;">{{ LICENSE }}</p>
+				{% endif %}	
+			  </address>
+			  <hr />			  
             </footer><!-- /.post-info -->
             <div class="entry-content">
               {{ article.content }}

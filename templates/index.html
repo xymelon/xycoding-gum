@@ -14,8 +14,15 @@
 				        <li><article class="hentry">
 				                <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
 				                <footer class="post-info">
-				                    <abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
-				                    {% if article.author %}<address class="vcard author">By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a></address>{% endif %}
+				                    <!--<abbr class="published" title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr>
+				                    {% if article.author %}<address class="vcard author">By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a></address>{% endif %}-->
+								 <address class="vcard author" style="font-style:italic;">
+									{{ article.locale_date }}
+									{% if article.author %}
+										&nbsp;&nbsp;Write By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+									{% endif %}
+								  </address>
+									
 				                </footer><!-- /.post-info -->
 				                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
 

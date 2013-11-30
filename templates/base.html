@@ -85,23 +85,30 @@
               <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
              
               <ul class="columns">
-                <li><a href="{{ SITEURL }}">Home</a></li>
-
-            {% for title, link in MENUITEMS %}
-                <li><a href="{{ link }}">{{ title }}</a></li>
-            {% endfor %}
-            {% if DISPLAY_PAGES_ON_MENU %}
-              {% for p in PAGES %}
-                <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-              {% endfor %}
-            {% else %}
-              {% if DISPLAY_CATEGORIES_ON_MENU %}
-                {% for cat, null in categories %}
-                  <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+                <li><a href="/">Home</a></li>
+				{% for cat, null in categories %}
+					<!--<li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>-->
+					<li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
                 {% endfor %}
-              {% endif %}
-            {% endif %}
-
+				<li><a href="/functions/archives.html">Archives</a></li>
+				<li><a href="/functions/random.html">Random Article</a></li>
+				<!--
+				{% for title, link in MENUITEMS %}
+					<li><a href="{{ link }}">{{ title }}</a></li>
+				{% endfor %}
+				
+				{% if DISPLAY_PAGES_ON_MENU %}
+				  {% for p in PAGES %}
+					<li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+				  {% endfor %}
+				{% else %}
+				  {% if DISPLAY_CATEGORIES_ON_MENU %}
+					{% for cat, null in categories %}
+					  <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+					{% endfor %}
+				  {% endif %}
+				{% endif %}
+				-->
               </ul>
             </div>
 
@@ -119,10 +126,10 @@
         <footer id="credits" class="row">
           <div class="seven columns left-center">
 				   <img alt="Welcome" height="77px" width="103px" src="{{ SITEURL }}/images/blogger.jpg" />												
-                   <address id="about" class="vcard body" style="margin-left:110px;margin-top:-85px">
+                   <address id="about" class="vcard body" style="margin-left:110px;margin-top:-80px">
 					博主目前就读于北邮，一名技术渣硕，码得了代码，调得了BUG。<br/>
 					Email:xuyangfighting@gmail.com&nbsp;欢迎添加友链~<br/>
-					本博客使用Pelican+GitHub Pages搭建，详细请参考<a href="http://www.xycoding.com/pages/2013/11/21/create-blog/" class="active" target="_blank">教程</a>。
+					本博客使用Pelican+GitHub Pages搭建，详细请参考<a href="http://www.xycoding.com/articles/2013/11/21/blog-create/" class="active" target="_blank">教程</a>。
 				   </address>
           </div>
 
