@@ -5,8 +5,8 @@
 
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 		
-		<meta name="description" content="Coding the World是一个专注于开源软件、Linux、数据结构、算法等的IT科技博客，希望大家一起交流学习。">
-		<meta name="keywords" content="码农，编程语言，开源软件，互联网，程序员找工作，Linux，数据结构，算法，移动互联网，生活时尚，情感交流，技术博客">
+		<meta name="description" content="{% block description %}{{'Coding the World是一个专注于开源软件、Linux、数据结构、算法等的IT科技博客，希望大家一起交流学习。'}}{% endblock description %}">
+		<meta name="keywords" content="Linux，pelican，github，github pages，数据结构，算法，编程语言，开源软件，互联网，程序员找工作，移动互联网，生活时尚，情感交流，研究生生活，技术博客">
 		
         <meta charset="utf-8" />
         {% if FEED_ALL_ATOM %}
